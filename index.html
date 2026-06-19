@@ -5,39 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Bar El Tuero | Restaurante en Aldea del Cano</title>
 
+<!-- SEO LOCAL -->
 <meta name="description" content="Bar El Tuero, antiguo hogar del pensionista en Aldea del Cano. Cocina tradicional, raciones y eventos en directo. Reserva tu mesa." />
 <meta name="keywords" content="restaurante en Aldea del Cano, bar Aldea del Cano, hogar del pensionista, bar de tapas, El Tuero" />
 <meta name="author" content="Bar El Tuero" />
 <meta name="robots" content="index, follow" />
 
+<!-- Open Graph / Redes Sociales -->
 <meta property="og:type" content="restaurant" />
 <meta property="og:title" content="Bar El Tuero | Aldea del Cano" />
 <meta property="og:description" content="Cocina tradicional y ambiente con solera en el antiguo hogar del pensionista de Aldea del Cano." />
-<meta property="og:image" content="assets/fachada.jpg" />
+<meta property="og:image" content="assets/img/fachada.jpg" />
 <meta property="og:locale" content="es_ES" />
 
-<link rel="icon" type="image/png" href="assets/logo_bar.png" />
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/img/logo_bar.png" />
 
+<!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 
+<!-- Tipografías: Playfair Display (Serif pesado elegante, acorde al logo) + Work Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
+<!-- Configuración Tailwind (Adaptada al logo) -->
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          carbon:   "#2B2723",
-          hueso:    "#F2EBDD",
-          vino:     "#7A2E1D",
-          corcho:   "#A8895E",
-          dehesa:   "#3D4A3A",
-          laton:    "#C9A961",
+          carbon:   "#050505", /* Negro casi puro para fundir con el fondo del logo */
+          plomo:    "#1A1A1A", /* Gris muy oscuro para crear profundidad */
+          hueso:    "#F8F5F0", /* Blanco roto para lectura */
+          laton:    "#D4AF37", /* Oro extraído del logo */
+          orooscuro:"#997A00",
         },
         fontFamily: {
-          display: ['"Fraunces"', 'serif'],
+          display: ['"Playfair Display"', 'serif'],
           body: ['"Work Sans"', 'sans-serif'],
         },
       },
@@ -46,31 +51,46 @@
 </script>
 
 <style>
+  /* Degradado metálico simulando el oro de las letras del logo */
+  .texto-oro {
+    background: linear-gradient(180deg, #F3E5AB 0%, #D4AF37 50%, #997A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
   .listón {
-    background-image: repeating-linear-gradient(90deg, rgba(168,137,94,0.35) 0px, rgba(168,137,94,0.35) 2px, transparent 2px, transparent 14px);
-    height: 6px;
+    background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.3) 50%, transparent 100%);
+    height: 1px;
+    width: 100%;
   }
+
   .textura-muro {
-    background-color: #2B2723;
-    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.025) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.02) 0, transparent 45%), radial-gradient(circle at 50% 50%, rgba(0,0,0,0.15) 0, transparent 60%);
+    background-color: #050505;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.015) 0, transparent 45%);
   }
+
   .ficha-pizarra {
-    border: 1px solid rgba(201,169,97,0.35);
-    box-shadow: inset 0 0 0 1px rgba(242,235,221,0.04);
+    background-color: #0A0A0A;
+    border: 1px solid rgba(212,175,55,0.2);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   }
+
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
   }
-  a:focus-visible, button:focus-visible { outline: 2px solid #C9A961; outline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
   html { scroll-behavior: smooth; }
 </style>
 
+<!-- SCHEMA.ORG JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Bar El Tuero",
-  "image": "https://www.barteltuero.com/assets/fachada.jpg",
+  "image": "https://www.barteltuero.com/assets/img/fachada.jpg",
   "telephone": "+34657748311",
   "priceRange": "€€",
   "servesCuisine": ["Extremeña", "Española", "Tapas"],
@@ -103,15 +123,16 @@
 </script>
 </head>
 
-<body class="bg-hueso text-carbon font-body antialiased">
+<body class="bg-carbon text-hueso font-body antialiased">
 
-<header class="fixed top-0 inset-x-0 z-50 bg-carbon/95 backdrop-blur-sm border-b border-laton/20">
+<!-- NAVEGACIÓN -->
+<header class="fixed top-0 inset-x-0 z-50 bg-carbon/95 backdrop-blur-md border-b border-laton/20">
   <nav class="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
     <a href="#inicio" class="flex items-center gap-3">
-      <img src="assets/logo_bar.png" alt="Logo El Tuero" class="h-10 w-auto object-contain">
-      <span class="font-display text-hueso text-xl sm:text-2xl tracking-wide hidden sm:block">El Tuero</span>
+      <!-- Ajustado el tamaño y forzado a encajar limpio sin bordes -->
+      <img src="assets/img/logo_bar.png" alt="Logo El Tuero" class="h-12 w-auto object-contain">
     </a>
-    <div class="hidden md:flex items-center gap-8 font-body text-sm text-hueso/85 uppercase tracking-wider">
+    <div class="hidden md:flex items-center gap-8 font-body text-sm text-hueso/80 uppercase tracking-wider">
       <a href="#sobre" class="hover:text-laton transition-colors">La casa</a>
       <a href="#carta" class="hover:text-laton transition-colors">La carta</a>
       <a href="#eventos" class="hover:text-laton transition-colors">Eventos</a>
@@ -123,57 +144,62 @@
   </nav>
 </header>
 
-<section id="inicio" class="textura-muro relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8">
+<!-- HERO -->
+<section id="inicio" class="textura-muro relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8 flex flex-col items-center justify-center min-h-[85vh]">
   <div class="max-w-4xl mx-auto text-center">
-    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5">Aldea del Cano · Cáceres</p>
-    <h1 class="font-display text-hueso text-5xl sm:text-7xl leading-[1.05] mb-6">Bar El Tuero</h1>
-    <p class="text-hueso/80 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-      Cocina tradicional y una barra que lleva abierta desde siempre. El antiguo hogar del pensionista, renovado con el espíritu de siempre.
+    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5">Aldea del Cano · Ruta Vía de la Plata</p>
+    <h1 class="font-display texto-oro text-6xl sm:text-8xl leading-tight mb-6 italic font-bold">
+      El Tuero
+    </h1>
+    <p class="text-hueso/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+      Cocina tradicional y una barra que lleva abierta desde siempre. El antiguo hogar del pensionista, renovado con el espíritu de la dehesa.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#carta" class="bg-vino text-hueso px-7 py-3 uppercase tracking-wider text-sm hover:bg-vino/85 transition-colors">Ver menú</a>
-      <a href="#contacto" class="border border-hueso/40 text-hueso px-7 py-3 uppercase tracking-wider text-sm hover:border-laton hover:text-laton transition-colors">Cómo llegar</a>
+      <a href="#carta" class="bg-laton text-carbon px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-hueso transition-colors">Ver menú</a>
+      <a href="#contacto" class="border border-laton/50 text-laton px-7 py-3 uppercase tracking-wider text-sm hover:border-laton hover:bg-laton/10 transition-colors">Cómo llegar</a>
     </div>
   </div>
 </section>
 
 <div class="listón"></div>
 
-<section id="sobre" class="py-20 sm:py-28 px-5 sm:px-8 bg-hueso">
+<!-- SOBRE LA CASA -->
+<section id="sobre" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12 items-center">
     <div>
-      <img src="assets/interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=900&auto=format&fit=crop'" alt="Interior del Bar El Tuero" class="w-full h-80 sm:h-[26rem] object-cover grayscale-[15%]" />
+      <img src="assets/img/interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=900&auto=format&fit=crop'" alt="Interior del Bar El Tuero" class="w-full h-80 sm:h-[26rem] object-cover border border-laton/20 opacity-90" />
     </div>
     <div>
-      <p class="text-vino uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">La casa</p>
-      <h2 class="font-display text-3xl sm:text-4xl mb-5 text-carbon">Tradición con la puerta siempre abierta</h2>
-      <p class="text-carbon/75 leading-relaxed mb-4">
+      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">La casa</p>
+      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-5">Tradición con la puerta siempre abierta</h2>
+      <p class="text-hueso/75 leading-relaxed mb-4">
         En El Tuero cocinamos como se ha cocinado siempre en esta tierra: con fuego lento y raciones para compartir. Una barra de toda la vida y vecinos que entran sin llamar.
       </p>
-      <p class="text-carbon/75 leading-relaxed">
+      <p class="text-hueso/75 leading-relaxed">
         Llevamos el nombre del tuero, el tronco que arde despacio en la chimenea durante el invierno extremeño: así es nuestra cocina, sin prisa y con sustancia.
       </p>
     </div>
   </div>
 </section>
 
-<div class="listón dehesa"></div>
+<div class="listón"></div>
 
+<!-- CARTA -->
 <section id="carta" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
   <div class="max-w-5xl mx-auto">
     <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">Lo nuestro</p>
-    <h2 class="font-display text-3xl sm:text-4xl text-hueso text-center mb-14">De la dehesa a la mesa</h2>
-    <div class="grid sm:grid-cols-3 gap-px bg-laton/15">
-      <div class="bg-carbon p-8 text-center">
-        <h3 class="font-display text-hueso text-xl mb-2">Ibéricos</h3>
+    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-14">De la dehesa a la mesa</h2>
+    <div class="grid sm:grid-cols-3 gap-px bg-laton/20">
+      <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
+        <h3 class="font-display text-laton text-xl mb-3">Ibéricos</h3>
         <p class="text-hueso/65 text-sm leading-relaxed">Jamón, lomo y chorizo de bellota de productores de la comarca.</p>
       </div>
-      <div class="bg-carbon p-8 text-center">
-        <h3 class="font-display text-hueso text-xl mb-2">Guisos caseros</h3>
+      <div class="bg-plomo p-8 text-center border-t-2 border-laton/50">
+        <h3 class="font-display text-laton text-xl mb-3">Guisos caseros</h3>
         <p class="text-hueso/65 text-sm leading-relaxed">Nuestra especialidad a fuego lento, con recetas de toda la vida.</p>
       </div>
-      <div class="bg-carbon p-8 text-center">
-        <h3 class="font-display text-hueso text-xl mb-2">Para compartir</h3>
+      <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
+        <h3 class="font-display text-laton text-xl mb-3">Para compartir</h3>
         <p class="text-hueso/65 text-sm leading-relaxed">Raciones generosas ideales para el centro de la mesa.</p>
       </div>
     </div>
@@ -182,66 +208,76 @@
 
 <div class="listón"></div>
 
-<section id="eventos" class="py-20 sm:py-28 px-5 sm:px-8 bg-hueso">
+<!-- EVENTOS -->
+<section id="eventos" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
   <div class="max-w-5xl mx-auto">
-    <p class="text-vino uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">El tablón</p>
-    <h2 class="font-display text-3xl sm:text-4xl text-carbon text-center mb-4">Hoy toca</h2>
-    <p class="text-carbon/60 text-center max-w-md mx-auto mb-14 text-sm">
+    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">El tablón</p>
+    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-4">Hoy toca</h2>
+    <p class="text-hueso/60 text-center max-w-md mx-auto mb-14 text-sm">
       Revisa nuestros próximos eventos. La información se actualiza regularmente.
     </p>
     <div id="contenedor-eventos" class="grid sm:grid-cols-3 gap-8">
-      </div>
+      <!-- Fichas generadas por JS -->
+    </div>
   </div>
 </section>
 
 <div class="listón"></div>
 
-<section id="contacto" class="py-20 sm:py-28 px-5 sm:px-8 bg-dehesa">
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12">
     <div>
       <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">Visítanos</p>
-      <h2 class="font-display text-3xl sm:text-4xl text-hueso mb-8">Te esperamos en la barra</h2>
-      <ul class="space-y-5 text-hueso/85 text-sm sm:text-base">
-        <li class="flex gap-3">
-          <span class="text-laton">📍</span>
-          <span>Calle Real, 1 — 10829 Aldea del Cano, Cáceres</span>
+      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-8">Te esperamos en la barra</h2>
+      <ul class="space-y-5 text-hueso/80 text-sm sm:text-base">
+        <li class="flex gap-4">
+          <span class="text-laton text-lg">📍</span>
+          <span>Calle Real, 1 — 10829<br>Aldea del Cano, Cáceres</span>
         </li>
-        <li class="flex gap-3">
-          <span class="text-laton">☎</span>
+        <li class="flex gap-4 items-center">
+          <span class="text-laton text-lg">☎</span>
           <a href="tel:+34657748311" class="hover:text-laton transition-colors"><strong>+34 657 748 311</strong></a>
         </li>
-        <li class="flex gap-3">
-          <span class="text-laton">🕒</span>
+        <li class="flex gap-4">
+          <span class="text-laton text-lg">🕒</span>
           <span>Lun–Jue y Dom: 8:00–23:00 <br> Vie–Sáb: 8:00–01:00</span>
         </li>
       </ul>
       <div class="flex gap-4 mt-10">
-        <a href="https://www.instagram.com/bardemayores_el_tuero/" target="_blank" rel="noopener noreferrer" class="border border-laton/50 text-laton w-11 h-11 flex items-center justify-center hover:bg-laton hover:text-dehesa transition-colors" aria-label="Instagram">
+        <a href="https://www.instagram.com/bardemayores_el_tuero/" target="_blank" rel="noopener noreferrer" class="border border-laton/50 text-laton w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-carbon transition-colors" aria-label="Instagram">
           IG
         </a>
-        <a href="https://maps.app.goo.gl/9uzCCUCzykGEKoSU9" target="_blank" rel="noopener noreferrer" class="border border-laton/50 text-laton w-11 h-11 flex items-center justify-center hover:bg-laton hover:text-dehesa transition-colors" aria-label="Google Maps">
+        <a href="https://maps.google.com/?q=Bar+El+Tuero+Aldea+del+Cano"
+           target="_blank" rel="noopener noreferrer"
+           class="border border-laton/50 text-laton w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-carbon transition-colors"
+           aria-label="Bar El Tuero en Google Maps">
           📍
         </a>
       </div>
     </div>
-    <div class="w-full h-72 sm:h-full min-h-[18rem] bg-carbon/30 border border-laton/20">
+    
+    <!-- IFRAME GOOGLE MAPS -->
+    <div class="w-full h-72 sm:h-full min-h-[18rem] bg-plomo border border-laton/20 p-1">
       <iframe
         title="Ubicación de Bar El Tuero en Aldea del Cano"
         src="https://www.google.com/maps?q=Aldea+del+Cano,+Cáceres&output=embed"
-        width="100%" height="100%" style="border:0;" loading="lazy"
+        width="100%" height="100%" style="border:0; filter: grayscale(80%) contrast(1.2);" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </div>
 </section>
 
-<footer class="bg-carbon py-8 px-5 sm:px-8 text-center">
-  <p class="font-display text-hueso text-lg mb-1">El Tuero</p>
-  <p class="text-hueso/50 text-xs">
-    © <span id="anio"></span> Bar El Tuero · Aldea del Cano, Cáceres
+<!-- FOOTER -->
+<footer class="bg-plomo py-10 px-5 sm:px-8 text-center border-t border-laton/10">
+  <img src="assets/img/logo_bar.png" alt="Logo El Tuero" class="h-10 w-auto mx-auto mb-4 opacity-50 grayscale">
+  <p class="text-hueso/40 text-xs tracking-widest uppercase">
+    © <span id="anio"></span> Bar El Tuero · Ruta Vía de la Plata
   </p>
 </footer>
 
+<!-- LÓGICA -->
 <script src="eventos.js"></script>
 <script>
   document.getElementById('anio').textContent = new Date().getFullYear();
@@ -253,13 +289,13 @@
     if(eventosFuturos.length > 0){
       eventosFuturos.forEach((ev) => {
         const ficha = document.createElement('article');
-        ficha.className = 'ficha-pizarra bg-carbon flex flex-col';
+        ficha.className = 'ficha-pizarra flex flex-col transition-transform hover:-translate-y-1';
         ficha.innerHTML = `
-          <img src="${ev.urlImagen}" alt="${ev.titulo}" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='assets/fachada.jpg'" />
+          <img src="${ev.urlImagen}" alt="${ev.titulo}" class="w-full h-48 object-cover border-b border-laton/20" loading="lazy" onerror="this.src='assets/img/fachada.jpg'" />
           <div class="p-6 flex flex-col flex-1">
-            <p class="text-laton text-xs uppercase tracking-wider mb-2">${ev.fecha}</p>
-            <h3 class="font-display text-hueso text-lg mb-3">${ev.titulo}</h3>
-            <p class="text-hueso/65 text-sm leading-relaxed flex-1">${ev.descripcion}</p>
+            <p class="text-laton text-xs uppercase tracking-wider mb-2 font-semibold">${ev.fecha}</p>
+            <h3 class="font-display text-hueso text-xl mb-3">${ev.titulo}</h3>
+            <p class="text-hueso/60 text-sm leading-relaxed flex-1">${ev.descripcion}</p>
           </div>
         `;
         contenedor.appendChild(ficha);
@@ -272,10 +308,9 @@
   }
 
   function mostrarMensajeVacio() {
-    contenedor.innerHTML = `<p class="text-carbon/50 col-span-3 text-center py-10">Actualmente no hay eventos programados. ¡Sigue nuestro Instagram para no perderte nada!</p>`;
+    contenedor.innerHTML = `<p class="text-hueso/40 col-span-3 text-center py-10 font-body">Actualmente no hay eventos programados. ¡Sigue nuestro Instagram para no perderte nada!</p>`;
   }
 </script>
 
 </body>
 </html>
-
