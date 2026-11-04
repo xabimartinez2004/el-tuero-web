@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bar El Tuero | Restaurante en Aldea del Cano</title>
+<title>Bar El Tuero | Desayunos y Pinchos en Aldea del Cano</title>
 
 <!-- SEO LOCAL -->
-<meta name="description" content="Bar El Tuero, antiguo hogar del pensionista en Aldea del Cano. Cocina tradicional, raciones y eventos en directo. Reserva tu mesa." />
-<meta name="keywords" content="restaurante en Aldea del Cano, bar Aldea del Cano, hogar del pensionista, bar de tapas, El Tuero" />
+<meta name="description" content="Bar cafetería junto al albergue en Aldea del Cano. Parada técnica en la Vía de la Plata: desayunos desde las 08:00, cervezas frías y pinchos para peregrinos y ciclistas." />
+<meta name="keywords" content="bar Aldea del Cano, cafetería Aldea del Cano, Vía de la Plata, desayunos peregrinos, bar albergue, pinchos, cervezas, ciclistas" />
 <meta name="author" content="Bar El Tuero" />
 <meta name="robots" content="index, follow" />
 
 <!-- Open Graph / Redes Sociales -->
-<meta property="og:type" content="restaurant" />
+<meta property="og:type" content="website" />
 <meta property="og:title" content="Bar El Tuero | Aldea del Cano" />
-<meta property="og:description" content="Cocina tradicional y ambiente con solera en el antiguo hogar del pensionista de Aldea del Cano." />
+<meta property="og:description" content="Desayunos tempranos, pinchos y cervezas frías junto al albergue. Tu parada en la Vía de la Plata." />
 <meta property="og:image" content="assets/img/fachada.jpg" />
 <meta property="og:locale" content="es_ES" />
 
@@ -24,21 +24,21 @@
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Tipografías: Playfair Display (Serif pesado elegante, acorde al logo) + Work Sans -->
+<!-- Tipografías: Playfair Display + Work Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Configuración Tailwind (Adaptada al logo) -->
+<!-- Configuración Tailwind -->
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          carbon:   "#050505", /* Negro casi puro para fundir con el fondo del logo */
-          plomo:    "#1A1A1A", /* Gris muy oscuro para crear profundidad */
-          hueso:    "#F8F5F0", /* Blanco roto para lectura */
-          laton:    "#D4AF37", /* Oro extraído del logo */
+          carbon:   "#050505", 
+          plomo:    "#1A1A1A", 
+          hueso:    "#F8F5F0", 
+          laton:    "#D4AF37", 
           orooscuro:"#997A00",
         },
         fontFamily: {
@@ -51,7 +51,6 @@
 </script>
 
 <style>
-  /* Degradado metálico simulando el oro de las letras del logo */
   .texto-oro {
     background: linear-gradient(180deg, #F3E5AB 0%, #D4AF37 50%, #997A00 100%);
     -webkit-background-clip: text;
@@ -88,12 +87,12 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
+  "@type": ["BarOrPub", "CafeOrCoffeeShop"],
   "name": "Bar El Tuero",
   "image": "https://www.barteltuero.com/assets/img/fachada.jpg",
   "telephone": "+34657748311",
-  "priceRange": "€€",
-  "servesCuisine": ["Extremeña", "Española", "Tapas"],
+  "priceRange": "€",
+  "servesCuisine": ["Desayunos", "Tapas", "Cafetería"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Calle Real, 1",
@@ -129,17 +128,16 @@
 <header class="fixed top-0 inset-x-0 z-50 bg-carbon/95 backdrop-blur-md border-b border-laton/20">
   <nav class="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
     <a href="#inicio" class="flex items-center gap-3">
-      <!-- Ajustado el tamaño y forzado a encajar limpio sin bordes -->
       <img src="assets/img/logo_bar.png" alt="Logo El Tuero" class="h-12 w-auto object-contain">
     </a>
     <div class="hidden md:flex items-center gap-8 font-body text-sm text-hueso/80 uppercase tracking-wider">
-      <a href="#sobre" class="hover:text-laton transition-colors">La casa</a>
-      <a href="#carta" class="hover:text-laton transition-colors">La carta</a>
+      <a href="#sobre" class="hover:text-laton transition-colors">El Local</a>
+      <a href="#barra" class="hover:text-laton transition-colors">En la Barra</a>
       <a href="#eventos" class="hover:text-laton transition-colors">Eventos</a>
-      <a href="#contacto" class="hover:text-laton transition-colors">Cómo llegar</a>
+      <a href="#contacto" class="hover:text-laton transition-colors">Ubicación</a>
     </div>
     <a href="#contacto" class="text-xs sm:text-sm uppercase tracking-wider border border-laton text-laton px-4 py-2 hover:bg-laton hover:text-carbon transition-colors">
-      Reservar
+      Cómo llegar
     </a>
   </nav>
 </header>
@@ -147,36 +145,36 @@
 <!-- HERO -->
 <section id="inicio" class="textura-muro relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8 flex flex-col items-center justify-center min-h-[85vh]">
   <div class="max-w-4xl mx-auto text-center">
-    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5">Aldea del Cano · Ruta Vía de la Plata</p>
+    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5">Aldea del Cano · Junto al Albergue</p>
     <h1 class="font-display texto-oro text-6xl sm:text-8xl leading-tight mb-6 italic font-bold">
       El Tuero
     </h1>
     <p class="text-hueso/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-      Cocina tradicional y una barra que lleva abierta desde siempre. El antiguo hogar del pensionista, renovado con el espíritu de la dehesa.
+      Tu primera parada del día o el descanso merecido tras la etapa. Desayunos tempranos, pinchos y cervezas frías en plena Vía de la Plata.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#carta" class="bg-laton text-carbon px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-hueso transition-colors">Ver menú</a>
-      <a href="#contacto" class="border border-laton/50 text-laton px-7 py-3 uppercase tracking-wider text-sm hover:border-laton hover:bg-laton/10 transition-colors">Cómo llegar</a>
+      <a href="#barra" class="bg-laton text-carbon px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-hueso transition-colors">Qué ofrecemos</a>
+      <a href="#contacto" class="border border-laton/50 text-laton px-7 py-3 uppercase tracking-wider text-sm hover:border-laton hover:bg-laton/10 transition-colors">Horario y Ubicación</a>
     </div>
   </div>
 </section>
 
 <div class="listón"></div>
 
-<!-- SOBRE LA CASA -->
+<!-- SOBRE EL LOCAL -->
 <section id="sobre" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12 items-center">
     <div>
       <img src="assets/img/interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=900&auto=format&fit=crop'" alt="Interior del Bar El Tuero" class="w-full h-80 sm:h-[26rem] object-cover border border-laton/20 opacity-90" />
     </div>
     <div>
-      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">La casa</p>
-      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-5">Tradición con la puerta siempre abierta</h2>
+      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">Parada Técnica</p>
+      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-5">Tradición y energía en ruta</h2>
       <p class="text-hueso/75 leading-relaxed mb-4">
-        En El Tuero cocinamos como se ha cocinado siempre en esta tierra: con fuego lento y raciones para compartir. Una barra de toda la vida y vecinos que entran sin llamar.
+        Ubicados en el antiguo hogar del pensionista, somos el punto de encuentro de los vecinos de Aldea del Cano y de los peregrinos que recorren el Camino. 
       </p>
       <p class="text-hueso/75 leading-relaxed">
-        Llevamos el nombre del tuero, el tronco que arde despacio en la chimenea durante el invierno extremeño: así es nuestra cocina, sin prisa y con sustancia.
+        Llevamos el nombre del tuero, el tronco que arde en la chimenea en invierno. Aquí encontrarás ese mismo calor: café rápido al amanecer, una barra dinámica y espacio para reponer fuerzas antes de seguir pedaleando o caminando.
       </p>
     </div>
   </div>
@@ -184,23 +182,23 @@
 
 <div class="listón"></div>
 
-<!-- CARTA -->
-<section id="carta" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
+<!-- SERVICIOS / BARRA -->
+<section id="barra" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
   <div class="max-w-5xl mx-auto">
-    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">Lo nuestro</p>
-    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-14">De la dehesa a la mesa</h2>
+    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">Nuestra barra</p>
+    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-14">Directo al grano</h2>
     <div class="grid sm:grid-cols-3 gap-px bg-laton/20">
       <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
-        <h3 class="font-display text-laton text-xl mb-3">Ibéricos</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Jamón, lomo y chorizo de bellota de productores de la comarca.</p>
+        <h3 class="font-display text-laton text-xl mb-3">Desayunos</h3>
+        <p class="text-hueso/65 text-sm leading-relaxed">Abrimos a las 08:00 h. Cafés recién hechos y tostadas para arrancar la etapa con fuerza.</p>
       </div>
       <div class="bg-plomo p-8 text-center border-t-2 border-laton/50">
-        <h3 class="font-display text-laton text-xl mb-3">Guisos caseros</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Nuestra especialidad a fuego lento, con recetas de toda la vida.</p>
+        <h3 class="font-display text-laton text-xl mb-3">Pinchos y Cervezas</h3>
+        <p class="text-hueso/65 text-sm leading-relaxed">Alta rotación. Tapas rápidas, bebidas frías y un ambiente perfecto para recuperar el aliento.</p>
       </div>
       <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
-        <h3 class="font-display text-laton text-xl mb-3">Para compartir</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Raciones generosas ideales para el centro de la mesa.</p>
+        <h3 class="font-display text-laton text-xl mb-3">Ciclistas y Peregrinos</h3>
+        <p class="text-hueso/65 text-sm leading-relaxed">Justo al lado del albergue. Sellado de credencial y espacio exterior para vigilar tu bicicleta.</p>
       </div>
     </div>
   </div>
@@ -212,7 +210,7 @@
 <section id="eventos" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
   <div class="max-w-5xl mx-auto">
     <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">El tablón</p>
-    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-4">Hoy toca</h2>
+    <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-4">Agenda del local</h2>
     <p class="text-hueso/60 text-center max-w-md mx-auto mb-14 text-sm">
       Revisa nuestros próximos eventos. La información se actualiza regularmente.
     </p>
@@ -229,11 +227,11 @@
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12">
     <div>
       <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">Visítanos</p>
-      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-8">Te esperamos en la barra</h2>
+      <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-8">Ubicación y Horario</h2>
       <ul class="space-y-5 text-hueso/80 text-sm sm:text-base">
         <li class="flex gap-4">
           <span class="text-laton text-lg">📍</span>
-          <span>Calle Real, 1 — 10829<br>Aldea del Cano, Cáceres</span>
+          <span>Calle Real, 1 — 10829<br>Aldea del Cano, Cáceres (Junto al Albergue)</span>
         </li>
         <li class="flex gap-4 items-center">
           <span class="text-laton text-lg">☎</span>
@@ -241,7 +239,7 @@
         </li>
         <li class="flex gap-4">
           <span class="text-laton text-lg">🕒</span>
-          <span>Lun–Jue y Dom: 8:00–23:00 <br> Vie–Sáb: 8:00–01:00</span>
+          <span>Lun–Jue y Dom: 08:00–23:00 <br> Vie–Sáb: 08:00–01:00</span>
         </li>
       </ul>
       <div class="flex gap-4 mt-10">
