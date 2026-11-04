@@ -52,13 +52,16 @@
 
 <style>
   /* Degradado dorado oscurecido para fondos blancos */
-  .texto-oro {
-    background: linear-gradient(180deg, #B8860B 0%, #8B6508 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-  }
+ .texto-oro {
+  background: linear-gradient(180deg, #B8860B 0%, #8B6508 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block; /* Asegura el cálculo correcto del área de renderizado */
+  padding-bottom: 0.15em; /* Añade margen libre para no cortar los trazos descendentes */
+}
+  
 
   .listón {
     background: linear-gradient(90deg, transparent 0%, rgba(184,134,11,0.2) 50%, transparent 100%);
@@ -142,9 +145,9 @@
 <section id="inicio" class="bg-crema relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8 flex flex-col items-center justify-center min-h-[85vh]">
   <div class="max-w-4xl mx-auto text-center">
     <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5 font-semibold">Aldea del Cano · Junto al Albergue</p>
-    <h1 class="font-display texto-oro text-6xl sm:text-8xl leading-tight mb-6 italic font-bold">
-      El Tuero
-    </h1>
+    <h1 class="font-display texto-oro text-6xl sm:text-8xl leading-snug mb-6 italic font-bold">
+  El Tuero
+</h1>
     <p class="text-plomo text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
       Tu primera parada del día o el descanso merecido tras la etapa. Desayunos, pinchos y cervezas frías en plena Vía de la Plata.
     </p>
@@ -194,7 +197,7 @@
       </div>
       <div class="ficha-blanca p-8 text-center rounded-sm">
         <h3 class="font-display text-carbon text-xl mb-3">Ciclistas y Peregrinos</h3>
-        <p class="text-plomo text-sm leading-relaxed">Justo al lado del albergue. Sellado de credencial y terraza para descansar vigilando tu bicicleta.</p>
+        <p class="text-plomo text-sm leading-relaxed">Justo al lado del albergue. Terraza amplia y acogedora, un rincón con encanto al aire libre perfecto para estirar las piernas al sol, tomarte algo fresco y vigilar tu bicicleta con total tranquilidad. </p>
       </div>
     </div>
   </div>
