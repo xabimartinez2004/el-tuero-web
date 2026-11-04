@@ -6,7 +6,7 @@
 <title>Bar El Tuero | Desayunos y Pinchos en Aldea del Cano</title>
 
 <!-- SEO LOCAL -->
-<meta name="description" content="Bar cafetería junto al albergue en Aldea del Cano. Parada técnica en la Vía de la Plata: desayunos desde las 08:00, cervezas frías y pinchos para peregrinos y ciclistas." />
+<meta name="description" content="Bar cafetería junto al albergue en Aldea del Cano. Parada técnica en la Vía de la Plata: desayunos, cervezas frías y pinchos para peregrinos y ciclistas." />
 <meta name="keywords" content="bar Aldea del Cano, cafetería Aldea del Cano, Vía de la Plata, desayunos peregrinos, bar albergue, pinchos, cervezas, ciclistas" />
 <meta name="author" content="Bar El Tuero" />
 <meta name="robots" content="index, follow" />
@@ -14,7 +14,7 @@
 <!-- Open Graph / Redes Sociales -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Bar El Tuero | Aldea del Cano" />
-<meta property="og:description" content="Desayunos tempranos, pinchos y cervezas frías junto al albergue. Tu parada en la Vía de la Plata." />
+<meta property="og:description" content="Desayunos, pinchos y cervezas frías junto al albergue. Tu parada en la Vía de la Plata." />
 <meta property="og:image" content="assets/img/fachada.jpg" />
 <meta property="og:locale" content="es_ES" />
 
@@ -29,17 +29,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Configuración Tailwind -->
+<!-- Configuración Tailwind (Adaptada a tema claro) -->
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          carbon:   "#050505", 
-          plomo:    "#1A1A1A", 
-          hueso:    "#F8F5F0", 
-          laton:    "#D4AF37", 
-          orooscuro:"#997A00",
+          blanco:   "#FFFFFF", 
+          crema:    "#F9F9F7", 
+          carbon:   "#1A1A1A", /* Texto principal oscuro */
+          plomo:    "#4A4A4A", /* Texto secundario gris */
+          laton:    "#B8860B", /* Oro oscurecido para contrastar en blanco */
         },
         fontFamily: {
           display: ['"Playfair Display"', 'serif'],
@@ -51,8 +51,9 @@
 </script>
 
 <style>
+  /* Degradado dorado oscurecido para fondos blancos */
   .texto-oro {
-    background: linear-gradient(180deg, #F3E5AB 0%, #D4AF37 50%, #997A00 100%);
+    background: linear-gradient(180deg, #B8860B 0%, #8B6508 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -60,26 +61,21 @@
   }
 
   .listón {
-    background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.3) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, rgba(184,134,11,0.2) 50%, transparent 100%);
     height: 1px;
     width: 100%;
   }
 
-  .textura-muro {
-    background-color: #050505;
-    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.02) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.015) 0, transparent 45%);
-  }
-
-  .ficha-pizarra {
-    background-color: #0A0A0A;
-    border: 1px solid rgba(212,175,55,0.2);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  .ficha-blanca {
+    background-color: #FFFFFF;
+    border: 1px solid #F3F4F6;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   }
 
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
   }
-  a:focus-visible, button:focus-visible { outline: 2px solid #D4AF37; outline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #B8860B; outline-offset: 3px; }
   html { scroll-behavior: smooth; }
 </style>
 
@@ -95,7 +91,7 @@
   "servesCuisine": ["Desayunos", "Tapas", "Cafetería"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Calle Real, 1",
+    "streetAddress": "Calle Carretera 1",
     "addressLocality": "Aldea del Cano",
     "addressRegion": "Cáceres",
     "postalCode": "10829",
@@ -104,15 +100,15 @@
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"],
-      "opens": "08:00",
-      "closes": "23:00"
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "23:59"
     },
     {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Friday","Saturday"],
-      "opens": "08:00",
-      "closes": "01:00"
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "12:00",
+      "closes": "23:59"
     }
   ],
   "sameAs": [
@@ -122,39 +118,39 @@
 </script>
 </head>
 
-<body class="bg-carbon text-hueso font-body antialiased">
+<body class="bg-blanco text-carbon font-body antialiased">
 
 <!-- NAVEGACIÓN -->
-<header class="fixed top-0 inset-x-0 z-50 bg-carbon/95 backdrop-blur-md border-b border-laton/20">
+<header class="fixed top-0 inset-x-0 z-50 bg-blanco/95 backdrop-blur-md border-b border-gray-100">
   <nav class="max-w-6xl mx-auto px-5 sm:px-8 py-3 flex items-center justify-between">
     <a href="#inicio" class="flex items-center gap-3">
       <img src="assets/img/logo_bar.png" alt="Logo El Tuero" class="h-12 w-auto object-contain">
     </a>
-    <div class="hidden md:flex items-center gap-8 font-body text-sm text-hueso/80 uppercase tracking-wider">
+    <div class="hidden md:flex items-center gap-8 font-body text-sm text-plomo uppercase tracking-wider">
       <a href="#sobre" class="hover:text-laton transition-colors">El Local</a>
       <a href="#barra" class="hover:text-laton transition-colors">En la Barra</a>
       <a href="#eventos" class="hover:text-laton transition-colors">Eventos</a>
       <a href="#contacto" class="hover:text-laton transition-colors">Ubicación</a>
     </div>
-    <a href="#contacto" class="text-xs sm:text-sm uppercase tracking-wider border border-laton text-laton px-4 py-2 hover:bg-laton hover:text-carbon transition-colors">
+    <a href="#contacto" class="text-xs sm:text-sm uppercase tracking-wider border border-laton text-laton px-4 py-2 hover:bg-laton hover:text-blanco transition-colors">
       Cómo llegar
     </a>
   </nav>
 </header>
 
 <!-- HERO -->
-<section id="inicio" class="textura-muro relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8 flex flex-col items-center justify-center min-h-[85vh]">
+<section id="inicio" class="bg-crema relative pt-32 pb-20 sm:pt-44 sm:pb-28 px-5 sm:px-8 flex flex-col items-center justify-center min-h-[85vh]">
   <div class="max-w-4xl mx-auto text-center">
-    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5">Aldea del Cano · Junto al Albergue</p>
+    <p class="font-body text-laton uppercase tracking-[0.3em] text-xs sm:text-sm mb-5 font-semibold">Aldea del Cano · Junto al Albergue</p>
     <h1 class="font-display texto-oro text-6xl sm:text-8xl leading-tight mb-6 italic font-bold">
       El Tuero
     </h1>
-    <p class="text-hueso/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-      Tu primera parada del día o el descanso merecido tras la etapa. Desayunos tempranos, pinchos y cervezas frías en plena Vía de la Plata.
+    <p class="text-plomo text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+      Tu primera parada del día o el descanso merecido tras la etapa. Desayunos, pinchos y cervezas frías en plena Vía de la Plata.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#barra" class="bg-laton text-carbon px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-hueso transition-colors">Qué ofrecemos</a>
-      <a href="#contacto" class="border border-laton/50 text-laton px-7 py-3 uppercase tracking-wider text-sm hover:border-laton hover:bg-laton/10 transition-colors">Horario y Ubicación</a>
+      <a href="#barra" class="bg-laton text-blanco px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:bg-carbon transition-colors">Qué ofrecemos</a>
+      <a href="#contacto" class="border border-laton/50 text-laton px-7 py-3 uppercase tracking-wider text-sm font-semibold hover:border-laton hover:bg-laton/10 transition-colors">Horario y Ubicación</a>
     </div>
   </div>
 </section>
@@ -162,19 +158,19 @@
 <div class="listón"></div>
 
 <!-- SOBRE EL LOCAL -->
-<section id="sobre" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
+<section id="sobre" class="py-20 sm:py-28 px-5 sm:px-8 bg-blanco">
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12 items-center">
     <div>
-      <img src="assets/img/interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=900&auto=format&fit=crop'" alt="Interior del Bar El Tuero" class="w-full h-80 sm:h-[26rem] object-cover border border-laton/20 opacity-90" />
+      <img src="assets/img/interior.jpg" onerror="this.src='https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=900&auto=format&fit=crop'" alt="Interior del Bar El Tuero" class="w-full h-80 sm:h-[26rem] object-cover shadow-lg" />
     </div>
     <div>
-      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">Parada Técnica</p>
+      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 font-semibold">Parada Técnica</p>
       <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-5">Tradición y energía en ruta</h2>
-      <p class="text-hueso/75 leading-relaxed mb-4">
+      <p class="text-plomo leading-relaxed mb-4">
         Ubicados en el antiguo hogar del pensionista, somos el punto de encuentro de los vecinos de Aldea del Cano y de los peregrinos que recorren el Camino. 
       </p>
-      <p class="text-hueso/75 leading-relaxed">
-        Llevamos el nombre del tuero, el tronco que arde en la chimenea en invierno. Aquí encontrarás ese mismo calor: café rápido al amanecer, una barra dinámica y espacio para reponer fuerzas antes de seguir pedaleando o caminando.
+      <p class="text-plomo leading-relaxed">
+        Llevamos el nombre del tuero, el tronco que arde en la chimenea en invierno. Aquí encontrarás ese mismo calor: terraza al aire libre, una barra dinámica y espacio para reponer fuerzas antes de seguir pedaleando o caminando.
       </p>
     </div>
   </div>
@@ -183,22 +179,22 @@
 <div class="listón"></div>
 
 <!-- SERVICIOS / BARRA -->
-<section id="barra" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
+<section id="barra" class="py-20 sm:py-28 px-5 sm:px-8 bg-crema">
   <div class="max-w-5xl mx-auto">
-    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">Nuestra barra</p>
+    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center font-semibold">Nuestra barra</p>
     <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-14">Directo al grano</h2>
-    <div class="grid sm:grid-cols-3 gap-px bg-laton/20">
-      <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
-        <h3 class="font-display text-laton text-xl mb-3">Desayunos</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Abrimos a las 08:00 h. Cafés recién hechos y tostadas para arrancar la etapa con fuerza.</p>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="ficha-blanca p-8 text-center rounded-sm">
+        <h3 class="font-display text-carbon text-xl mb-3">Desayunos</h3>
+        <p class="text-plomo text-sm leading-relaxed">Arrancamos a las 09:00 h entre semana. Cafés recién hechos y tostadas para empezar la etapa con fuerza.</p>
       </div>
-      <div class="bg-plomo p-8 text-center border-t-2 border-laton/50">
-        <h3 class="font-display text-laton text-xl mb-3">Pinchos y Cervezas</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Alta rotación. Tapas rápidas, bebidas frías y un ambiente perfecto para recuperar el aliento.</p>
+      <div class="ficha-blanca p-8 text-center rounded-sm">
+        <h3 class="font-display text-carbon text-xl mb-3">Pinchos y Cervezas</h3>
+        <p class="text-plomo text-sm leading-relaxed">Alta rotación. Tapas rápidas, bebidas frías y un ambiente perfecto para recuperar el aliento.</p>
       </div>
-      <div class="bg-plomo p-8 text-center border-t-2 border-laton/30">
-        <h3 class="font-display text-laton text-xl mb-3">Ciclistas y Peregrinos</h3>
-        <p class="text-hueso/65 text-sm leading-relaxed">Justo al lado del albergue. Sellado de credencial y espacio exterior para vigilar tu bicicleta.</p>
+      <div class="ficha-blanca p-8 text-center rounded-sm">
+        <h3 class="font-display text-carbon text-xl mb-3">Ciclistas y Peregrinos</h3>
+        <p class="text-plomo text-sm leading-relaxed">Justo al lado del albergue. Sellado de credencial y terraza para descansar vigilando tu bicicleta.</p>
       </div>
     </div>
   </div>
@@ -207,11 +203,11 @@
 <div class="listón"></div>
 
 <!-- EVENTOS -->
-<section id="eventos" class="py-20 sm:py-28 px-5 sm:px-8 bg-plomo">
+<section id="eventos" class="py-20 sm:py-28 px-5 sm:px-8 bg-blanco">
   <div class="max-w-5xl mx-auto">
-    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center">El tablón</p>
+    <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 text-center font-semibold">El tablón</p>
     <h2 class="font-display texto-oro text-3xl sm:text-4xl text-center mb-4">Agenda del local</h2>
-    <p class="text-hueso/60 text-center max-w-md mx-auto mb-14 text-sm">
+    <p class="text-plomo text-center max-w-md mx-auto mb-14 text-sm">
       Revisa nuestros próximos eventos. La información se actualiza regularmente.
     </p>
     <div id="contenedor-eventos" class="grid sm:grid-cols-3 gap-8">
@@ -223,32 +219,36 @@
 <div class="listón"></div>
 
 <!-- CONTACTO -->
-<section id="contacto" class="py-20 sm:py-28 px-5 sm:px-8 bg-carbon">
+<section id="contacto" class="py-20 sm:py-28 px-5 sm:px-8 bg-crema">
   <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-12">
     <div>
-      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3">Visítanos</p>
+      <p class="text-laton uppercase tracking-[0.25em] text-xs sm:text-sm mb-3 font-semibold">Visítanos</p>
       <h2 class="font-display texto-oro text-3xl sm:text-4xl mb-8">Ubicación y Horario</h2>
-      <ul class="space-y-5 text-hueso/80 text-sm sm:text-base">
+      <ul class="space-y-5 text-plomo text-sm sm:text-base">
         <li class="flex gap-4">
           <span class="text-laton text-lg">📍</span>
-          <span>Calle Real, 1 — 10829<br>Aldea del Cano, Cáceres (Junto al Albergue)</span>
+          <span>Calle Carretera 1 — 10829<br>Aldea del Cano, Cáceres (Junto al Albergue)</span>
         </li>
         <li class="flex gap-4 items-center">
           <span class="text-laton text-lg">☎</span>
-          <a href="tel:+34657748311" class="hover:text-laton transition-colors"><strong>+34 657 748 311</strong></a>
+          <a href="tel:+34657748311" class="hover:text-laton font-semibold transition-colors">+34 657 748 311</a>
         </li>
         <li class="flex gap-4">
           <span class="text-laton text-lg">🕒</span>
-          <span>Lun–Jue y Dom: 08:00–23:00 <br> Vie–Sáb: 08:00–01:00</span>
+          <span>
+            <strong>Mar–Vie:</strong> 09:00 a Cierre <br> 
+            <strong>Sáb–Dom:</strong> 12:00 a Cierre <br> 
+            <span class="text-red-700 font-semibold">Lunes: Descanso</span>
+          </span>
         </li>
       </ul>
       <div class="flex gap-4 mt-10">
-        <a href="https://www.instagram.com/bardemayores_el_tuero/" target="_blank" rel="noopener noreferrer" class="border border-laton/50 text-laton w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-carbon transition-colors" aria-label="Instagram">
+        <a href="https://www.instagram.com/bardemayores_el_tuero/" target="_blank" rel="noopener noreferrer" class="border border-laton/50 text-laton font-semibold w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-blanco transition-colors" aria-label="Instagram">
           IG
         </a>
-        <a href="https://maps.google.com/?q=Bar+El+Tuero+Aldea+del+Cano"
+        <a href="https://maps.google.com/?q=Calle+Carretera+1+Aldea+del+Cano"
            target="_blank" rel="noopener noreferrer"
-           class="border border-laton/50 text-laton w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-carbon transition-colors"
+           class="border border-laton/50 text-laton w-12 h-12 flex items-center justify-center hover:bg-laton hover:text-blanco transition-colors"
            aria-label="Bar El Tuero en Google Maps">
           📍
         </a>
@@ -256,11 +256,11 @@
     </div>
     
     <!-- IFRAME GOOGLE MAPS -->
-    <div class="w-full h-72 sm:h-full min-h-[18rem] bg-plomo border border-laton/20 p-1">
+    <div class="w-full h-72 sm:h-full min-h-[18rem] bg-blanco border border-gray-200 p-1 shadow-sm">
       <iframe
         title="Ubicación de Bar El Tuero en Aldea del Cano"
-        src="https://www.google.com/maps?q=Aldea+del+Cano,+Cáceres&output=embed"
-        width="100%" height="100%" style="border:0; filter: grayscale(80%) contrast(1.2);" loading="lazy"
+        src="https://www.google.com/maps?q=Calle+Carretera+1,+Aldea+del+Cano,+Cáceres&output=embed"
+        width="100%" height="100%" style="border:0;" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
@@ -268,9 +268,9 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-plomo py-10 px-5 sm:px-8 text-center border-t border-laton/10">
+<footer class="bg-blanco py-10 px-5 sm:px-8 text-center border-t border-gray-100">
   <img src="assets/img/logo_bar.png" alt="Logo El Tuero" class="h-10 w-auto mx-auto mb-4 opacity-50 grayscale">
-  <p class="text-hueso/40 text-xs tracking-widest uppercase">
+  <p class="text-plomo/60 text-xs tracking-widest uppercase">
     © <span id="anio"></span> Bar El Tuero · Ruta Vía de la Plata
   </p>
 </footer>
@@ -287,13 +287,13 @@
     if(eventosFuturos.length > 0){
       eventosFuturos.forEach((ev) => {
         const ficha = document.createElement('article');
-        ficha.className = 'ficha-pizarra flex flex-col transition-transform hover:-translate-y-1';
+        ficha.className = 'ficha-blanca flex flex-col transition-transform hover:-translate-y-1 rounded-sm overflow-hidden';
         ficha.innerHTML = `
-          <img src="${ev.urlImagen}" alt="${ev.titulo}" class="w-full h-48 object-cover border-b border-laton/20" loading="lazy" onerror="this.src='assets/img/fachada.jpg'" />
+          <img src="${ev.urlImagen}" alt="${ev.titulo}" class="w-full h-48 object-cover border-b border-gray-100" loading="lazy" onerror="this.src='assets/img/fachada.jpg'" />
           <div class="p-6 flex flex-col flex-1">
-            <p class="text-laton text-xs uppercase tracking-wider mb-2 font-semibold">${ev.fecha}</p>
-            <h3 class="font-display text-hueso text-xl mb-3">${ev.titulo}</h3>
-            <p class="text-hueso/60 text-sm leading-relaxed flex-1">${ev.descripcion}</p>
+            <p class="text-laton text-xs uppercase tracking-wider mb-2 font-bold">${ev.fecha}</p>
+            <h3 class="font-display text-carbon text-xl mb-3">${ev.titulo}</h3>
+            <p class="text-plomo text-sm leading-relaxed flex-1">${ev.descripcion}</p>
           </div>
         `;
         contenedor.appendChild(ficha);
@@ -306,7 +306,7 @@
   }
 
   function mostrarMensajeVacio() {
-    contenedor.innerHTML = `<p class="text-hueso/40 col-span-3 text-center py-10 font-body">Actualmente no hay eventos programados. ¡Sigue nuestro Instagram para no perderte nada!</p>`;
+    contenedor.innerHTML = `<p class="text-plomo/60 col-span-3 text-center py-10 font-body">Actualmente no hay eventos programados. ¡Sigue nuestro Instagram para no perderte nada!</p>`;
   }
 </script>
 
